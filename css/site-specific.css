@@ -1,7 +1,7 @@
 body{
     font-family: 'Ubuntu', helvetica, sans-serif;
-    background-color: #111115;
-    color: #FFFFFF;
+    background-color: white;
+    color: black;
 }
 
 div.title{
@@ -10,11 +10,11 @@ div.title{
 }
 
 h1{
-  color: #FFFFFF;
+  color: black;
     font-weight: 400;
     font-size: 2em;
     max-width: 1200px;
-    text-align: left;
+    text-align: center;
     margin: 25px, 25px;
     margin-right: auto;
     margin-left: auto;
@@ -22,21 +22,54 @@ h1{
 }
 
 h2{
-  color: #FFFFFF;
-  text-align: left;
+  color: black;
+  text-align: center;
   font-size: 1.5em;
 }
 
 h3{
-  font-size: 1em;
-  color: #FFFFFF;
+  font-size: 1.25em;
+  color: black;
     font-weight: 300;
     max-width: 1200px;
-    text-align: left;
+    text-align: center;
     margin-top: 5px;
     margin-right: auto;
     margin-left: auto;
     margin-bottom: auto;
+}
+
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:contain;
+  position: relative;
+}
+
+.parallax .left {
+  background-position: left;
+}
+
+.parallax .right {
+  background-position: right;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: black;
+}
+
+.caption span.border {
+  background-color: lightgray;
+  color: black;
+  padding: 18px;
+  font-size: 18px;
+  letter-spacing: 5px;
 }
 
 div.bio{
@@ -53,17 +86,36 @@ img.bioImage{
     display: block;
 }
 
-img.heatmap{
+img.banner{
   width: auto;
-  height: auto;
-  margin: auto;
-  display: block;
+  max-width: 50%;
+  text-align: center;
+  display: inline;
+}
+
+.main-header {
+  text-align: center;
+  max-height: 100px;
 }
 
 div.carousel-caption{
   position: relative;
   left: auto;
   right: auto;
+  color: black;
+}
+
+.carousel-indicators li{
+  border-color: black;
+}
+
+.carousel-indicators .active{
+  background-color: black;
+}
+
+p.caption{
+  color: black;
+  font-size: 1em;
 }
 
 p.bioText{
@@ -74,12 +126,12 @@ p.bioText{
 
 p.bioText > a{
   text-decoration: underline;
-    color: #FFFFFF;
+    color: black;
 }
 
 p.bioText > a:hover{
   color: black;
-    background-color: #FFFFFF;
+    background-color: gray;
 }
 
 div.linkList{
@@ -96,9 +148,9 @@ li.assignmentLink{
 }
 
 li.assignmentLink > a{
-    color: #FFFFFF;
+    color: black;
 }
 
 li.assignmentLink > a:hover{
-    background-color: #FFFFFF;
+    background-color: lightgray;
 }
