@@ -67,6 +67,10 @@ h3{
   background-position: top;
 }
 
+.parallax .bottom {
+  background-position: bottom;
+}
+
 .caption {
   position: absolute;
   left: 0;
