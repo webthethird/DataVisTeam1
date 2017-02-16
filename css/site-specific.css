@@ -39,12 +39,20 @@ h3{
     margin-bottom: auto;
 }
 
+.text {
+  color: #777;
+  background-color:white;
+  padding:50px 80px;
+  text-align: justify;
+}
+
 .parallax {
   background-attachment: fixed;
-  background-position: center;
   background-repeat: no-repeat;
-  background-size:contain;
+  background-size: contain;
   position: relative;
+  padding: 50px 80px;
+  top:0px;
 }
 
 .parallax .left {
@@ -53,6 +61,10 @@ h3{
 
 .parallax .right {
   background-position: right;
+}
+
+.parallax .top {
+  background-position: top;
 }
 
 .caption {
