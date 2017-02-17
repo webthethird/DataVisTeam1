@@ -67,8 +67,14 @@ h3{
   background-position: top;
 }
 
-.parallax .bottom {
+.parallax-bottom {
   background-position: bottom;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  padding: 50px 80px;
+  top:0px;
 }
 
 .caption {
