@@ -1,0 +1,229 @@
+{"cities":
+  [
+    {
+      "name": "Atlantic City",
+      "country":"United States",
+      "common": [
+        "Harrah",
+        "Trump",
+        "Caesar",
+        "Bally",
+        "Ocean Club",
+        "Borgata",
+        "Revel",
+        "Tropicana",
+        "Rendezvous",
+        "Atlantic Palace"
+      ]
+    },{
+      "name": "Chicago",
+      "country":"United States",
+      "common": [
+        "Trump",
+        "Central Station",
+        "Elysian",
+        "John Hancock",
+        "Lakeshore East",
+        "LaSalle",
+        "Marina City",
+        "Presidential",
+        "Winston",
+        "Willis"
+      ]
+    },{
+      "name": "Jersey City",
+      "country": "United States",
+      "common": [
+        "Trump",
+        "Monaco",
+        "Newport",
+        "Mandalay",
+        "Atlantic" ,
+        "Riverside",
+        "Montgomery",
+        "Harborside",
+        "Liberty View",
+        "Marbella"
+      ]
+    },{
+      "name": "Las Vegas",
+      "country": "United States",
+      "common": [
+        "Trump",
+        "Hilton",
+        "Palazzo",
+        "Aria",
+        "Vdara",
+        "Mandrin Oriental",
+        "Ballagio",
+        "New York",
+        "Turnberry",
+        "MGM Grand"
+      ]
+    },{
+      "name": "Los Angeles",
+      "country": "United States",
+      "common": [
+        "Trump",
+        "Park La Brea",
+        "Bunker Hill",
+        "Biltmore",
+        "Century",
+        "Fiqueroa",
+        "Hilton",
+        "Sheraton",
+        "Vermont",
+        "Warner"
+      ]
+    },{
+      "name": "New York City",
+      "country": "United States",
+      "common": [
+        "Trump",
+        "World Trade",
+        "Empire State",
+        "Central Park",
+        "Chrysler",
+        "Bronx River",
+        "Citigroup",
+        "Continental",
+        "Patterson",
+        "Riverton"
+      ]
+    },{
+      "name": "Sunny Isles Beach",
+      "country": "United States",
+      "common": [
+        "Trump",
+        "Turnberry",
+        "Ritz",
+        "Jade",
+        "Regalia",
+        "Residence",
+        "Porsche",
+        "Perla",
+        "Ocean Four",
+        "Beach Resort"
+      ]
+    },{
+      "name": "Washington",
+      "country": "United States",
+      "common": [
+        "Trump",
+        "Lincoln",
+        "Taft",
+        "Jefferson",
+        "Washington Monument",
+        "Hilton",
+        "Lafayette",
+        "Cairo",
+        "Davis",
+        "Dupont"
+      ]
+    },{
+      "name": "Istanbul",
+      "country": "Turkey",
+      "common": [
+        "Trump",
+        "Skyland",
+        "Anthill",
+        "Four Winds",
+        "Tekstilkent",
+        "Sapphire",
+        "Is Bankasi",
+        "Maslak",
+        "Atasehir",
+        "World Trade"
+      ]
+    },{
+      "name": "Makati",
+      "country": "Philippines",
+      "common": [
+        "Stratford",
+        "Garden Tower",
+        "Gramercy",
+        "Iconique",
+        "Enterprise",
+        "Rockwell",
+        "Roxas",
+        "Shang",
+        "Salcedo",
+        "Knightsbridge"
+      ]
+    },{
+      "name": "Seoul",
+      "country": "South Korea",
+      "common": [
+        "Trump",
+        "Lotte",
+        "Tower Palace",
+        "Galleria",
+        "Acros",
+        "Samsung",
+        "Mok-dong" ,
+        "Mokdong",
+        "Daelim",
+        "Hyundai",
+        "LG"
+      ]
+    },{
+      "name": "Mumbai",
+      "country": "India",
+      "common": [
+        "Trump",
+        "World",
+        "Omkar",
+        "Lokhandwala",
+        "Lodha",
+        "Orchid",
+        "DB Woods",
+        "Oberoi",
+        "Ashok",
+        "Challenger"
+      ]
+    },{
+      "name": "Panama",
+      "country": "Panama",
+      "common": [
+        "Trump",
+        "Yoo",
+        "Pacific Hills",
+        "Pearl",
+        "Costa Pacifica",
+        "Parque del Mar",
+        "Rivage",
+        "Star Bay"
+      ]
+    },{
+      "name": "Toronto",
+      "country": "Canada",
+      "common": [
+        "Trump",
+        "CN",
+        "Harbour Plaza",
+        "Aura",
+        "York",
+        "Aurora",
+        "TD",
+        "Harbourview",
+        "Quantum",
+        "Lotheron"
+      ]
+    },{
+      "name": "Vancouver",
+      "country": "Canada",
+      "common": [
+        "Trump",
+        "Aquarius",
+        "Bentall",
+        "Residence",
+        "Scotia",
+        "Lion",
+        "Viceroy",
+        "Living",
+        "One Wall",
+        "Fairmont"
+      ]
+    }
+  ]
+}
