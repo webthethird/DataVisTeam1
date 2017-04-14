@@ -8,7 +8,12 @@
 import scrapy
 
 
-class TutorialItem(scrapy.Item):
+class Skyscraper(scrapy.Item):
     # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    name = scrapy.Field()
+    city = scrapy.Field()
+    height = scrapy.Field()
+    year = scrapy.Field()
+    file_urls = scrapy.Field()
+    files = scrapy.Field()
+    # pass
