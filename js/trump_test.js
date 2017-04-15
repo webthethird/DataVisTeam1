@@ -8,6 +8,11 @@ var brands_by_city = {};
 var city_list = ["New York City", "Atlantic City", "Jersey City", "Sunny Isles Beach", "Las Vegas", "Chicago", "Washington", "Toronto", "Vancouver", "Istanbul", "Panama", "Mumbai", "Makati", "Seoul"];
 var list_position;
 var currentCity;
+var brands;
+
+var ht_factor = 0.5;
+var margin;
+var col_width;
 
 function preload() {
   var skyscraper_csv = loadTable("../webscraping/skyscrapers_master.csv", "csv", "header", loadedCSV);
@@ -17,38 +22,36 @@ function setup(){
   createCanvas(windowWidth, windowHeight);
   sortBrands(brandData);
   noLoop();
-  imageMode(CORNER);
+  imageMode(CORNERS);
   list_position = 0;
 }
 
 function draw(){
   background(250);
+  margin = max(int(windowWidth*0.05),25);
   currentCity = city_list[list_position];
   textSize(24);
-  text(currentCity, 50, 50);
-  var brands = brands_by_city[currentCity];
+  // textAlign(CENTER);
+  text(currentCity, windowWidth/2, 50);
+  brands = brands_by_city[currentCity];
   if(brands != null){
+    col_width = (windowWidth - 2*margin)/brands.length;
+    console.log(col_width);
     for(var i = 0; i < brands.length; i++){
       var brand = brands[i];
-      branded_bldgs_by_city[currentCity]
       var brand_bldgs = branded_bldgs_by_city[currentCity][brand];
-      console.log(brand);
-      console.log(brand_bldgs);
-      textSize(12);
-      var x = 50+100*i;
-      text(brand, x, 75, 100, 100);
-      for(var j = 0; j < brand_bldgs.length; j++){
-        var building = brand_bldgs[j];
-        building.u = i;
-        building.v = j;
-        var url = building.img;
-        loadImage(url, function(img){
-          // console.log(img);
-          image(img, 50+100*building.u, 250, img.width, img.height);
-        })
-      }
+      // console.log(brand);
+      // console.log(brand_bldgs);
+      textSize(14);
+      var x = margin + col_width*i;
+      text(brand, x, windowHeight-50, 100, 100);
+      getImages(brand_bldgs, i);
     }
   }
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
 
 function loadedCSV(data) {
@@ -91,6 +94,44 @@ function sortBrands(brands) {
       }
     }
   }
-  console.log(branded_bldgs_by_city);
+  // console.log(branded_bldgs_by_city);
+}
 
+function getImages(buildings, i) {
+  var nextHeight = 0;
+  for(var j = 0; j < buildings.length; j++){
+    var building = buildings[j];
+    building.u = i;
+    building.v = j;
+    var url = building.img;
+    if(!building.image){
+      // console.log("Loading image: " + building.name);
+      loadImage(url, function(img){
+        // console.log(img);
+        building.image = img;
+        building.width = img.width;
+        building.height = img.height;
+        building.yStart = nextHeight * ht_factor;
+        nextHeight += building.height;
+        // console.log(building);
+        drawImage(building, ht_factor);
+      })
+    }
+  }
+
+}
+
+function drawImage(building, factor) {
+  var u = building.u;
+  // var width = building.width;
+  var width = min(col_width - 10, building.width);
+  var height = int(building.height * factor);
+  var img = building.image;
+  var bot = windowHeight - 75 - building.yStart;
+  var x = margin + col_width*u;
+  if (img == null || img == undefined) return;
+  if (building.brandname == "Trump") {
+
+  }
+  image(img, x, bot, x + width, bot - height);
 }
