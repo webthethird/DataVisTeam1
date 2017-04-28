@@ -1,29 +1,100 @@
-var scrapedata;
-var skyscraper_csv;
+var scrapeData;
+var brandData;
 var city_words;
-var brands;
-var brands_json;
 
 var branded_bldgs_by_city = {};
+var brands_by_city = {};
 
+var city_list = ["New York City", "Atlantic City", "Jersey City", "Sunny Isles Beach", "Las Vegas", "Chicago", "Washington", "Toronto", "Vancouver", "Istanbul", "Panama", "Mumbai", "Makati", "Seoul"];
+var list_position;
+var prevPosition;
+var currentCity;
+var brands;
+
+var nextCity;
+var prevCity;
+
+var ht_factor = 0.5;
+var margin;
+var col_width;
 
 function preload() {
-  skyscraper_csv = loadTable("../webscraping/skyscrapers_master.csv", "csv", "header", loadedCSV);
+  var skyscraper_csv = loadTable("../webscraping/skyscrapers_master.csv", "csv", "header", loadedCSV);
 }
 
 function setup(){
-  createCanvas(windowWidth, windowHeight);
+  var canvas = createCanvas(windowWidth, windowHeight);
+  canvas.parent('sketch-holder');
+  sortBrands(brandData);
+  imageMode(CORNERS);
+  list_position = 0;
+  nextCity = select('#next');
+  prevCity = select('#prev');
+  nextCity.mousePressed(loadNextCity);
+  prevCity.mousePressed(loadPrevCity);
+  noLoop();
 }
 
-//function draw(){
-  //background(200);
-//}
+function draw(){
+  background(250);
+  margin = max(int(windowWidth*0.05),25);
+  currentCity = city_list[list_position];
+  textSize(24);
+  // textAlign(CENTER);
+  text(currentCity, windowWidth/2, 100);
+  if(list_position != prevPosition) {
+    loadCity();
+  }
+  prevPosition = list_position;
+}
+
+function loadNextCity() {
+  if(list_position < (city_list.length - 1)) {
+    list_position += 1;
+  } else {
+    list_position = 0;
+  }
+  redraw();
+}
+
+function loadPrevCity() {
+  if(list_position == 0) {
+    list_position = city_list.length - 1;
+  } else {
+    list_position -= 1
+  }
+  redraw();
+}
+
+function loadCity() {
+  brands = brands_by_city[currentCity];
+  col_width = (windowWidth - 2*margin)/brands.length;
+  console.log(col_width);
+  for(var i = 0; i < brands.length; i++){
+    var brand = brands[i];
+    var brand_bldgs = branded_bldgs_by_city[currentCity][brand];
+    // console.log(brand);
+    // console.log(brand_bldgs);
+    textSize(14);
+    var x = margin + col_width*i;
+    text(brand, x, windowHeight-50, 100, 100);
+    getImages(brand_bldgs, i);
+  }
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
 
 function loadedCSV(data) {
   // console.log(data);
-  scrapedata = data;
-  brands_json = loadJSON("../webscraping/brand_frequency.json", sortBrands);
+  scrapeData = data;
+  var brands_json = loadJSON("../webscraping/brand_frequency.json", loadedJSON);
+}
 
+function loadedJSON(data) {
+  // console.log(data);
+  brandData = data;
 }
 
 function sortBrands(brands) {
@@ -34,23 +105,65 @@ function sortBrands(brands) {
     var brand_list = city.common;
     // console.log(name);
     if(branded_bldgs_by_city[cityname] == null) {
-      branded_bldgs_by_city[cityname] = [];
+      branded_bldgs_by_city[cityname] = {};
+      brands_by_city[cityname] = [];
+      for(var b = 0; b < brand_list.length; b++){
+        var brand = brand_list[b];
+        brands_by_city[cityname].push(brand);
+        branded_bldgs_by_city[cityname][brand] = [];
+      }
     }
-    for(var j = 0; j < scrapedata.rows.length; j++){
-      var row = scrapedata.rows[j].obj;
+    for(var j = 0; j < scrapeData.rows.length; j++){
+      var row = scrapeData.rows[j].obj;
       if(row.city == cityname) {
         for(var k = 0; k < brand_list.length; k++){
           var brandname = brand_list[k];
-          var bldg_by_brand
           if (row.name.includes(brandname)) {
-            // console.log(row);
-            branded_bldgs_by_city[cityname].push(row);
+            row.brandname = brandname;
+            branded_bldgs_by_city[cityname][brandname].push(row);
           }
         }
       }
     }
   }
-  console.log(branded_bldgs_by_city);
+  // console.log(branded_bldgs_by_city);
 }
 
+function getImages(buildings, i) {
+  var nextHeight = 0;
+  for(var j = 0; j < buildings.length; j++){
+    var building = buildings[j];
+    building.u = i;
+    building.v = j;
+    var url = building.img;
+    if(!building.image){
+      // console.log("Loading image: " + building.name);
+      loadImage(url, function(img){
+        // console.log(img);
+        building.image = img;
+        building.width = img.width;
+        building.height = img.height;
+        building.yStart = nextHeight * ht_factor;
+        nextHeight += building.height;
+        // console.log(building);
+        drawImage(building, ht_factor);
+      })
+    }
+  }
 
+}
+
+function drawImage(building, factor) {
+  var u = building.u;
+  // var width = building.width;
+  var width = min(col_width - 10, building.width);
+  var height = int(building.height * factor);
+  var img = building.image;
+  var bot = windowHeight - 75 - building.yStart;
+  var x = margin + col_width*u;
+  if (img == null || img == undefined) return;
+  if (building.brandname == "Trump") {
+
+  }
+  image(img, x, bot, x + width, bot - height);
+}

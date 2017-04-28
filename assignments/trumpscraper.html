@@ -1,23 +1,39 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Taller than Trump</title>
+    <title>TALLER than TRUMP</title>
     <meta charset="utf-8">
     <!-- Stylesheet link -->
     <link rel="stylesheet" type="text/css" href="../css/site-specific.css">
 
     <!-- Google fonts code -->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
+    <script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css" />
 
     <!-- Loading p5.js library -->
     <script language="javascript" type="text/javascript" src="../libraries/p5-js/p5.js"></script>
+    <script language="javascript" type="text/javascript" src="../libraries/p5-js/addons/p5.dom.js"></script>
 
     <!-- Link to p5 sketch file -->
     <script language="javascript" type="text/javascript" src="../js/trump_test.js"></script>
-
   </head>
   <body>
-        <div class="title">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">TALLER than TRUMP</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a id="prev" href="#">Previous City</a></li>
+          <li><a id="next" href="#">Next City</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div id="sketch-holder"></div>
+    <div class="title">
+      <br>
       <h1>TALLER THAN TRUMP</h1>
       <h3>Final Project Proposal</h3>
     </div>
@@ -51,7 +67,7 @@
         <li>Chicago, USA
           <ul>
             <li>HCentral Station, Elysian, John Hancock, Lakeshore East, LaSalle, Marina City, Presidential Towers, Winston Tower, Willis</li>
-          </ul> 
+          </ul>
         <li>Istanbul, Turkey
           <ul>
             <li>Skyland, Anthill, Four Winds, Tekstilkent, Sapphire, Is Bankasi, Maslak, Atasehir, World Trade</li>
@@ -99,11 +115,11 @@
         <li>Vancouver, Canada
           <ul>
             <li>Aquarius, Bentall, Residence, Scotia, Lion, Viceroy, Living, One Wall, Fairmont</li>
-          </ul> 
+          </ul>
         <li>Washington DC, USA
           <ul>
             <li>Lincoln, Taft, Jefferson, Washington, Hilton, Lafayette, Cairo, Davis, Dupont</li>
-          </ul> 
+          </ul>
         </ul>
       <p>From each city we scrapped a dataset from the website skyscraperpage.com. Once the datasets were acquired we used the nltk text sorting tool to look for common words in each of the fifteen cities. Based on the commonly identified words, we determined the top ten most prominent corporations/developers for each city where a Trump tower can be found. After accumulating the top ten developers for each of the respective cities, the goal is to see how they size up against Trump. A portion of the developers examined have one or two buildings in their respective city which are larger than Trump’s developments. Additionally, some of the developments examined contain numerous buildings, which when the floors are aggregated exceed Trump’s prominence.</p>
       <p>Although the methodology with the scrapped data and text sorting is not perfect, it gives a sense of Trump’s relative influence in each city. It shows that for every city examined, with the exception of New York, his developments are being outpaced by numerous other organizations and developers.</p>
@@ -117,7 +133,7 @@
   <hr>
   <img src="../img/graph3.png">
 
-     
+
 
   </body>
 </html>

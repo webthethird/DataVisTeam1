@@ -1,0 +1,21 @@
+{
+  "name": "DataVisTeam1",
+  "homepage": "https://github.com/webthethird/DataVisTeam1",
+  "authors": [
+    "webthethird <bodellarch@yahoo.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
