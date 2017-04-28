@@ -23,7 +23,8 @@ function preload() {
 }
 
 function setup(){
-  createCanvas(windowWidth, windowHeight);
+  var canvas = createCanvas(windowWidth, windowHeight);
+  canvas.parent('sketch-holder');
   sortBrands(brandData);
   imageMode(CORNERS);
   list_position = 0;
