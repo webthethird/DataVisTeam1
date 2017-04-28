@@ -7,8 +7,12 @@ var brands_by_city = {};
 
 var city_list = ["New York City", "Atlantic City", "Jersey City", "Sunny Isles Beach", "Las Vegas", "Chicago", "Washington", "Toronto", "Vancouver", "Istanbul", "Panama", "Mumbai", "Makati", "Seoul"];
 var list_position;
+var prevPosition;
 var currentCity;
 var brands;
+
+var nextCity;
+var prevCity;
 
 var ht_factor = 0.5;
 var margin;
@@ -21,9 +25,13 @@ function preload() {
 function setup(){
   createCanvas(windowWidth, windowHeight);
   sortBrands(brandData);
-  noLoop();
   imageMode(CORNERS);
   list_position = 0;
+  nextCity = select('#next');
+  prevCity = select('#prev');
+  nextCity.mousePressed(loadNextCity);
+  prevCity.mousePressed(loadPrevCity);
+  noLoop();
 }
 
 function draw(){
@@ -32,21 +40,44 @@ function draw(){
   currentCity = city_list[list_position];
   textSize(24);
   // textAlign(CENTER);
-  text(currentCity, windowWidth/2, 50);
+  text(currentCity, windowWidth/2, 100);
+  if(list_position != prevPosition) {
+    loadCity();
+  }
+  prevPosition = list_position;
+}
+
+function loadNextCity() {
+  if(list_position < (city_list.length - 1)) {
+    list_position += 1;
+  } else {
+    list_position = 0;
+  }
+  redraw();
+}
+
+function loadPrevCity() {
+  if(list_position == 0) {
+    list_position = city_list.length - 1;
+  } else {
+    list_position -= 1
+  }
+  redraw();
+}
+
+function loadCity() {
   brands = brands_by_city[currentCity];
-  if(brands != null){
-    col_width = (windowWidth - 2*margin)/brands.length;
-    console.log(col_width);
-    for(var i = 0; i < brands.length; i++){
-      var brand = brands[i];
-      var brand_bldgs = branded_bldgs_by_city[currentCity][brand];
-      // console.log(brand);
-      // console.log(brand_bldgs);
-      textSize(14);
-      var x = margin + col_width*i;
-      text(brand, x, windowHeight-50, 100, 100);
-      getImages(brand_bldgs, i);
-    }
+  col_width = (windowWidth - 2*margin)/brands.length;
+  console.log(col_width);
+  for(var i = 0; i < brands.length; i++){
+    var brand = brands[i];
+    var brand_bldgs = branded_bldgs_by_city[currentCity][brand];
+    // console.log(brand);
+    // console.log(brand_bldgs);
+    textSize(14);
+    var x = margin + col_width*i;
+    text(brand, x, windowHeight-50, 100, 100);
+    getImages(brand_bldgs, i);
   }
 }
 
