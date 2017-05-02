@@ -3,7 +3,7 @@
     {
       "name": "Atlantic City",
       "country":"United States",
-      "common": [
+      "developers": [
         "Harrah",
         "Trump",
         "Caesar",
@@ -18,7 +18,7 @@
     },{
       "name": "Chicago",
       "country":"United States",
-      "common": [
+      "developers": [
         "Trump",
         "Central Station",
         "Elysian",
@@ -32,7 +32,7 @@
     },{
       "name": "Las Vegas",
       "country": "United States",
-      "common": [
+      "developers": [
         "Trump",
         "Hilton",
         "Palazzo",
@@ -49,7 +49,7 @@
       "country": "United States",
       "quote": "“I’m the biggest developer in New York by far, there’s nobody even closer,” Trump said on Fox News in 1997. And on the pilot episode of The Apprentice: “My name is Donald Trump and I’m the largest real estate developer in New York.”",
       "quotesource": "www.buzzfeed.com/andrewkaczynski/trump-often-claimed-to-be-the-largest-real-estate-developer?utm_term=.pyE1qX9p4d#.tjmylKe5LV",
-      "common": [
+      "developers": [
         "Trump",
         "World Trade",
         "Empire State",
@@ -61,7 +61,7 @@
     },{
       "name": "Sunny Isles Beach",
       "country": "United States",
-      "common": [
+      "developers": [
         "Trump",
         "Turnberry",
         "Ritz",
@@ -76,7 +76,7 @@
     },{
       "name": "Istanbul",
       "country": "Turkey",
-      "common": [
+      "developers": [
         "Trump",
         "Skyland",
         "Anthill",
@@ -93,7 +93,7 @@
       "country": "Philippines",
       "quote": "[Philippine President Rodrigo] Duterte appointed real estate magnate Jose E.B. Antonio as a special trade envoy to the U.S. — and Antonio happens to be the man building Trump Tower Manila... Antonio is the chairman of Century Properties and one of the Philippines' highest-profile businessmen; he previously has served as the country's special trade envoy to China.",
       "quotesource": "www.npr.org/sections/parallels/2016/11/22/502895797/whos-the-new-philippine-envoy-the-man-building-trump-tower-manila",
-      "common": [
+      "developers": [
         "Century Properties",
         "Shang Properties",
         "Ayala Land",
@@ -110,7 +110,7 @@
       "country": "South Korea",
       "quote": "Donald Trump has his real estate footprints in South Korea as well, having lent his name to a construction company from the late 1990s to use on high-rise residential buildings in what was his first such arrangement with a foreign firm. Daewoo Engineering & Construction (Daewoo E&C), then a builder unit of the larger Daewoo Group, first partnered with Trump in September 1997 to erect the Trump World Tower in Manhattan.",
       "quotesource": "english.yonhapnews.co.kr/news/2016/05/11/0200000000AEN20160511002300320.html",
-      "common": [
+      "developers": [
         "Daewoo E&C",
         "Lotte E&C",
         "Samsung C&T",
@@ -127,7 +127,7 @@
       "country": "India",
       "quote": "Units in Trump Tower Mumbai are listed at prices roughly 30 percent higher than units in comparable buildings. The premium derives from the brand-licensing agreement the Trump Organization signed with the building’s developers: the Lodha Group, a giant, family-owned real estate empire much like Trump’s. The Lodhas staked the building’s success on Trump’s brand value.",
       "quotesource": "www.washingtonpost.com/world/asia_pacific/trump-says-his-brand-ishotter-but-sales-at-trump-tower-mumbai-have-chilled/2017/01/05/b7cae4a0-ceb4-11e6-a87f-b917067331bb_story.html?utm_term=.8e4eeba0e5c5",
-      "common": [
+      "developers": [
         "Lodha Group",
         "Oberoi Realty",
         "DB Realty",
@@ -142,7 +142,7 @@
     },{
       "name": "Panama",
       "country": "Panama",
-      "common": [
+      "developers": [
         "Trump",
         "Yoo",
         "Pacific Hills",
@@ -155,7 +155,7 @@
     },{
       "name": "Toronto",
       "country": "Canada",
-      "common": [
+      "developers": [
         "Trump",
         "CN",
         "Harbour Plaza",
@@ -164,13 +164,12 @@
         "Aurora",
         "TD",
         "Harbourview",
-        "Quantum",
-        "Lotheron"
+        "Quantum"
       ]
     },{
       "name": "Vancouver",
       "country": "Canada",
-      "common": [
+      "developers": [
         "Trump",
         "Aquarius",
         "Bentall",
