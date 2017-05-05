@@ -13,15 +13,18 @@ var prevPosition;
 var currentCity;
 var nextCity;
 var prevCity;
-var dropdown;
+var navCity;
+var currentQuote;
+var quoteSource;
+var quotebox;
 var brands;
 
 // Global containers
 var branded_bldgs_by_city = {};
 var brands_by_city = {};
 var bldgs_by_city = {};
-var city_list = ["New York City", "Chicago", "Las Vegas", "Atlantic City", "Sunny Isles Beach", "Toronto", "Vancouver", "Istanbul", "Panama", "Mumbai", "Makati", "Seoul"];
-var tables = {};
+var quotes_by_city = {};
+var city_list = ["New York City", "Chicago", "Las Vegas", "Atlantic City", "Sunny Isles Beach", "Toronto", "Vancouver", "Panama", "Istanbul", "Mumbai", "Makati", "Seoul"];
 
 // Canvas variables
 var ht_factor = 1;
@@ -30,11 +33,13 @@ var col_width;
 var originY;
 var maxHeight;
 
+// Color variables
+
 function preload() {
   // First loads table of skyscrapers scraped from SkyscraperPage.com,
   // Callback function loadedCSV() triggers loadJSON() of top brands/developers per city
   // Finally, loadedJSON() triggers sortBrands(), which matches brands/developers to buildings from database
-  var skyscraper_csv = loadTable("../webscraping/skyscraper_combined_all.csv", "csv", "header", loadedCSV);
+  var skyscraper_csv = loadTable("../webscraping/skyscrapers_master_v2.csv", "csv", "header", loadedCSV);
 }
 
 function setup(){
@@ -44,6 +49,7 @@ function setup(){
   // sortBrands(brandData);
   imageMode(CORNERS);
   rectMode(CORNERS);
+  // colorMode(HSB);
   // Set some global variables for convenience
   originY = windowHeight - 100;
   maxHeight = 1000;
@@ -51,7 +57,8 @@ function setup(){
   // Identify navigation buttons and set click functions
   nextCity = select('#next');
   prevCity = select('#prev');
-  dropdown = select('#dropdown-menu');
+  navCity = select('#navCity');
+  quotebox = select('.quote');
   nextCity.mousePressed(loadNextCity);
   prevCity.mousePressed(loadPrevCity);
   // Create html tables and place them beneath each city header
@@ -75,8 +82,12 @@ function setup(){
 function draw(){
   margin = max(int(windowWidth*0.05),25);
   currentCity = city_list[list_position];
+  currentQuote = quotes_by_city[currentCity].quote;
+  quoteSource = quotes_by_city[currentCity].source;
   background(250);
   removeElements();
+  var quoteP = createA("http://"+quoteSource, currentQuote);
+  quoteP.parent(quotebox);
   // drawGraph();
   loadCity();
 }
@@ -84,12 +95,13 @@ function draw(){
 function drawGraph(){
   textSize(24);
   textAlign(CENTER);
-  text(currentCity, windowWidth/2, windowHeight - 50);
+  // text(currentCity, windowWidth/2, windowHeight - 50);
+  stroke('black')
   line(margin, originY, windowWidth - margin, originY);
   line(margin, originY, margin, margin);
-  console.log(originY);
-  console.log(windowHeight);
-  console.log(maxHeight);
+  // console.log(originY);
+  // console.log(windowHeight);
+  // console.log(maxHeight);
   for (var y = 0; y < maxHeight; y += 100) {
     var yOffset = originY - (y * ht_factor);
     stroke(0);
@@ -99,12 +111,14 @@ function drawGraph(){
     textSize(12);
     textAlign(RIGHT);
     var string = y + " m ";
+    noStroke();
     text(string, margin, yOffset);
   }
 }
 
 function loadCity() {
   brands = brands_by_city[currentCity];
+  navCity.html(currentCity);
   if (bldgs_by_city[currentCity] == undefined) {
     bldgs_by_city[currentCity] = [];
   }
@@ -114,7 +128,7 @@ function loadCity() {
     var brand = brands[i];
     var brand_bldgs = branded_bldgs_by_city[currentCity][brand];
     // console.log(brand);
-    // console.log(brand_bldgs);
+    console.log(brand_bldgs);
     textSize(14);
     textAlign(CENTER);
     var x = margin + col_width*i;
@@ -174,6 +188,8 @@ function sortBrands(brands) {
     var city = brands.cities[i];
     var country = city.country;
     var cityname = city.name;
+    var quote = city.quote;
+    var quotesource = city.quotesource;
     var brand_list = city.developers;
     // console.log(name);
     if(branded_bldgs_by_city[cityname] == null) {
@@ -184,6 +200,9 @@ function sortBrands(brands) {
         brands_by_city[cityname].push(brand);
         branded_bldgs_by_city[cityname][brand] = [];
       }
+    }
+    if(quotes_by_city[cityname] == null) {
+      quotes_by_city[cityname] = {"quote": quote, "source": quotesource};
     }
     for(var j = 0; j < scrapeData.rows.length; j++){
       var row = scrapeData.rows[j].obj;
@@ -206,6 +225,7 @@ function sortBrands(brands) {
 function getImages(buildings, i) {
   var nextHeight = 0;
   buildings.forEach(function(building, j, bldgs){
+    // console.log(building);
     building.u = i;
     building.v = j;
     var url = building.img;
@@ -237,7 +257,7 @@ function getImages(buildings, i) {
     } else {
       nextHeight += building.height;
       if (nextHeight > maxHeight) {
-        maxHeight = nextHeight*1.1;
+        maxHeight = nextHeight*1.2;
         console.log("New max height: "+maxHeight);
         ht_factor = min(1, windowHeight/maxHeight);
         console.log("New height factor: "+ht_factor);
@@ -253,7 +273,7 @@ function getImages(buildings, i) {
 
 function drawImages() {
   var buildings = bldgs_by_city[currentCity];
-  console.log(buildings);
+  // console.log(buildings);
   for(var k = 0; k < buildings.length; k++){
     var building = buildings[k];
     var u = building.u;
@@ -266,26 +286,23 @@ function drawImages() {
     var x = margin + col_width*u;
     if (img == null || img == undefined) return;
     if (building.name.includes("Trump")) {
-      fill('orange');
+      var orangeT1 = color("#e68200");
+      var orangeT2 = color("#e66f00");
+      var orangeT3 = color("#e65c00");
+      var orangeT4 = color("#e63600");
+      if (building.trump_status == "license") {
+        fill(orangeT1);
+      } else if (building.trump_status == "owns") {
+        fill(orangeT2);
+      } else if (building.trump_status == "bankrupt_sold") {
+        fill(orangeT4);
+      } else {
+        fill(orangeT3);
+      }
       noStroke();
-      rect(x, bot, x + col_width, bot - height);
+      rect(x, bot, x + col_width*0.9, bot - height);
       fill('black');
     }
     image(img, x, bot, x + width, bot - height);
   }
-}
-
-function drawImage(building) {
-  var u = building.u;
-  // var width = building.width;
-  var width = min(col_width - 10, building.width);
-  var height = int(building.height * ht_factor);
-  var img = building.image;
-  var bot = originY - (building.yStart * ht_factor);
-  var x = margin + col_width*u;
-  if (img == null || img == undefined) return;
-  if (building.brandname == "Trump") {
-
-  }
-  image(img, x, bot, x + width, bot - height);
 }

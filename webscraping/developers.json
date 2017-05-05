@@ -3,100 +3,113 @@
     {
       "name": "Atlantic City",
       "country":"United States",
+      "quote": "“Atlantic City fueled a lot of growth for me… the money I took out of there was incredible.” <br>- How Donald Trump Bankrupted His Atlantic City Casinos, but Still Earned Millions <br> New York Times, June 11, 2016",
+      "quotesource": "www.nytimes.com/2016/06/12/nyregion/donald-trump-atlantic-city.html?_r=1",
       "developers": [
-        "Harrah",
+        "MGM",
         "Trump",
-        "Caesar",
-        "Bally",
-        "Ocean Club",
-        "Borgata",
+        "Resorts",
         "Revel",
+        "Caesars",
         "Tropicana",
-        "Rendezvous",
-        "Atlantic Palace"
+        "Wyndham"
       ]
     },{
       "name": "Chicago",
       "country":"United States",
+      "quote": "Chicago Approves Plan To Block Trump's Name on His Tower With Giant, Flying Pigs <br>- Heat Street, May 4, 2017",
+      "quotesource": "www.heatst.com/culture-wars/chicago-architects-okd-to-block-out-trump-tower-with-giant-golden-flying-pigs/",
       "developers": [
+        "Golub",
+        "Related Companies",
+        "John Buck",
+        "Magellan",
+        "Blackstone",
         "Trump",
-        "Central Station",
-        "Elysian",
-        "John Hancock",
-        "Lakeshore East",
-        "Marina City",
-        "Presidential",
-        "Winston",
-        "Willis"
+        "Fifield",
+        "CMK",
+        "JDL",
+        "Belgravia"
       ]
     },{
       "name": "Las Vegas",
       "country": "United States",
+      "quote": "“I’m much, much richer than what they say. I’m a private person, nobody knows.” <br>– Donald J. Trump at rally in Las Vegas, NV on July 11th, 2015",
+      "quotesource": "uk.businessinsider.com/donald-trump-just-gave-surreal-speech-in-las-vegas-2015-7?op=1?r=US&IR=T",
       "developers": [
-        "Trump",
-        "Hilton",
-        "Palazzo",
-        "Aria",
-        "Vdara",
-        "Mandrin Oriental",
-        "Ballagio",
-        "New York",
+        "MGM",
+        "Caesars",
+        "Colony Capital",
         "Turnberry",
-        "MGM Grand"
+        "Sheldon Adelson",
+        "Boyd",
+        "Hallier",
+        "Marriott",
+        "Deutche",
+        "Goldman Sachs",
+        "Steve Wynn",
+        "Trump"
       ]
     },{
       "name": "New York City",
       "country": "United States",
-      "quote": "“I’m the biggest developer in New York by far, there’s nobody even closer,” Trump said on Fox News in 1997. And on the pilot episode of The Apprentice: “My name is Donald Trump and I’m the largest real estate developer in New York.”",
+      "quote": "“I’m the biggest developer in New York by far, there’s nobody even closer,” Trump said on Fox News in 1997. And on the pilot episode of The Apprentice: “My name is Donald Trump and I’m the largest real estate developer in New York.” <br>- Buzzfeed News, August 23, 2016",
       "quotesource": "www.buzzfeed.com/andrewkaczynski/trump-often-claimed-to-be-the-largest-real-estate-developer?utm_term=.pyE1qX9p4d#.tjmylKe5LV",
       "developers": [
+        "Related Companies",
+        "Extell Development",
         "Trump",
-        "World Trade",
-        "Empire State",
-        "Central Park",
-        "Chrysler",
+        "Durst",
+        "SL Green",
+        "Vornado",
+        "Boston Properties",
+        "Macklowe",
         "Citigroup",
         "Continental"
       ]
     },{
       "name": "Sunny Isles Beach",
       "country": "United States",
+      "quote": "“63 people with Russian addresses or passports have bought at least $98.4 million of in Trump-branded luxury towers in southern Florida” <br>– Reuters, March 17, 2017",
+      "quotesource": "www.reuters.com/investigates/special-report/usa-trump-property/",
       "developers": [
-        "Trump",
+        "Donald Trump",
+        "Jules Trump",
         "Turnberry",
-        "Ritz",
         "Jade",
-        "Regalia",
-        "Residence",
+        "Ritz-Carlton",
+        "Armani Casa",
         "Porsche",
-        "Perla",
-        "Ocean Four",
-        "Beach Resort"
+        "La Perla",
+        "Dezer Development",
+        "Bernardo Brescia"
       ]
     },{
       "name": "Istanbul",
       "country": "Turkey",
+      "quote": "Mr. Trump has received his fair share of bad publicity in Turkey. In June, President Recep Tayyip Erdogan even called for the towers to be renamed, in protest of Mr. Trump’s Islamophobic remarks during the campaign. <br>- New York Times, February 8, 2017",
+      "quotesource": "www.nytimes.com/2017/02/08/world/middleeast/in-istanbul-surprise-that-trump-towers-complex-is-linked-to-trump",
       "developers": [
-        "Trump",
-        "Skyland",
-        "Anthill",
-        "Four Winds",
-        "Tekstilkent",
-        "Sapphire",
-        "Is Bankasi",
-        "Maslak",
-        "Atasehir",
-        "World Trade"
+        "Agaoglu Group",
+        "Varyap",
+        "Koray Holding",
+        "Eroglu Real Estate",
+        "Tasyapi Construction",
+        "Ant Yapi",
+        "Dogan Holding",
+        "Zorlu Group",
+        "Kiler GYO",
+        "Nurol GYO"
       ]
     },{
       "name": "Makati",
       "country": "Philippines",
-      "quote": "[Philippine President Rodrigo] Duterte appointed real estate magnate Jose E.B. Antonio as a special trade envoy to the U.S. — and Antonio happens to be the man building Trump Tower Manila... Antonio is the chairman of Century Properties and one of the Philippines' highest-profile businessmen; he previously has served as the country's special trade envoy to China.",
+      "quote": "[Philippine President Rodrigo] Duterte appointed real estate magnate Jose E.B. Antonio as a special trade envoy to the U.S. — and Antonio happens to be the man building Trump Tower Manila... Antonio is the chairman of Century Properties and one of the Philippines' highest-profile businessmen; he previously has served as the country's special trade envoy to China. <br>NPR, November 22, 2016",
       "quotesource": "www.npr.org/sections/parallels/2016/11/22/502895797/whos-the-new-philippine-envoy-the-man-building-trump-tower-manila",
       "developers": [
+        "Ayala Land",
         "Century Properties",
         "Shang Properties",
-        "Ayala Land",
         "Rockwell Land",
         "Robinsons Land",
         "Filinvest Land",
@@ -108,24 +121,24 @@
     },{
       "name": "Seoul",
       "country": "South Korea",
-      "quote": "Donald Trump has his real estate footprints in South Korea as well, having lent his name to a construction company from the late 1990s to use on high-rise residential buildings in what was his first such arrangement with a foreign firm. Daewoo Engineering & Construction (Daewoo E&C), then a builder unit of the larger Daewoo Group, first partnered with Trump in September 1997 to erect the Trump World Tower in Manhattan.",
+      "quote": "Donald Trump has his real estate footprints in South Korea as well, having lent his name to a construction company from the late 1990s to use on high-rise residential buildings in what was his first such arrangement with a foreign firm. Daewoo Engineering & Construction (Daewoo E&C), then a builder unit of the larger Daewoo Group, first partnered with Trump in September 1997 to erect the Trump World Tower in Manhattan. <br>- Yonhap News, May 11, 2016",
       "quotesource": "english.yonhapnews.co.kr/news/2016/05/11/0200000000AEN20160511002300320.html",
       "developers": [
-        "Daewoo E&C",
-        "Lotte E&C",
         "Samsung C&T",
         "Hyundai E&C",
-        "GS E&C" ,
+        "Lotte E&C",
         "POSCO",
-        "Doosan E&C",
         "Daelim Industrial",
+        "GS E&C",
+        "Daewoo E&C",
         "Dongbu Corp",
+        "Doosan E&C",
         "SK E&C"
       ]
     },{
       "name": "Mumbai",
       "country": "India",
-      "quote": "Units in Trump Tower Mumbai are listed at prices roughly 30 percent higher than units in comparable buildings. The premium derives from the brand-licensing agreement the Trump Organization signed with the building’s developers: the Lodha Group, a giant, family-owned real estate empire much like Trump’s. The Lodhas staked the building’s success on Trump’s brand value.",
+      "quote": "Units in Trump Tower Mumbai are listed at prices roughly 30 percent higher than units in comparable buildings. The premium derives from the brand-licensing agreement the Trump Organization signed with the building’s developers: the Lodha Group, a giant, family-owned real estate empire much like Trump’s. The Lodhas staked the building’s success on Trump’s brand value. <br>- The Washington Post, January 6, 2017",
       "quotesource": "www.washingtonpost.com/world/asia_pacific/trump-says-his-brand-ishotter-but-sales-at-trump-tower-mumbai-have-chilled/2017/01/05/b7cae4a0-ceb4-11e6-a87f-b917067331bb_story.html?utm_term=.8e4eeba0e5c5",
       "developers": [
         "Lodha Group",
@@ -142,44 +155,50 @@
     },{
       "name": "Panama",
       "country": "Panama",
+      "quote": "Donald Trump was declared persona non grata by Panama City in 2011, after he told CNN that turning over the Panama Canal to the country was ‘‘foolish.’’ <br>- The Boston Globe, December 29, 2016",
+      "quotesource": "www.bostonglobe.com/news/nation/2016/12/29/how-declared-persona-non-grata-and-get-yourself-kicked-out/KBXyHYb2MRtlceSU3KL7ZP/story.html",
       "developers": [
+        "F&F Properties",
+        "Btesh & Virzi",
+        "Grupo Consorcio General",
+        "Desarrollo Bahia",
         "Trump",
-        "Yoo",
-        "Pacific Hills",
-        "Pearl",
-        "Costa Pacifica",
-        "Parque del Mar",
-        "Rivage",
-        "Star Bay"
+        "Constructora Bahia",
+        "City Land Panama",
+        "Regency Real Estate",
+        "Semusa Realty",
+        "The Group Panama"
       ]
     },{
       "name": "Toronto",
       "country": "Canada",
+      "quote": "“It looked great at the time because it was such a novelty for the city. Trump was a big, big name, it looked like it would be a huge success, but the whole thing was doomed to failure.”  <br>- Susan Pigg, a former real estate reporter with the Toronto Star who covered the saga of the Trump hotel.",
+      "quotesource": "www.npr.org/sections/parallels/2017/02/08/513946283/trump-tower-in-toronto-is-up-for-sale-and-facing-legal-woes",
       "developers": [
-        "Trump",
-        "CN",
-        "Harbour Plaza",
-        "Aura",
-        "York",
-        "Aurora",
-        "TD",
-        "Harbourview",
-        "Quantum"
+        "Tridel Corporation",
+        "Lanterra Developments",
+        "Menkes Developments",
+        "Concord Adex Developments",
+        "Great Gulf Homes",
+        "Monarch Construction",
+        "Centre Court Developments",
+        "The Conservatory Group",
+        "Daniels Corporation",
+        "Talon International"
       ]
     },{
       "name": "Vancouver",
       "country": "Canada",
+      "quote": "Trump Tower in Vancouver renamed ‘Dump Tower’ on Google Maps <br>- Global News, November 27, 2016",
       "developers": [
-        "Trump",
-        "Aquarius",
-        "Bentall",
-        "Residence",
-        "Scotia",
-        "Lion",
-        "Viceroy",
-        "Living",
-        "One Wall",
-        "Fairmont"
+        "Concord Pacific Group",
+        "Wall Financial",
+        "Pinnacle International",
+        "Westbank",
+        "Concert Properties",
+        "Bosa Development",
+        "Aspac Development",
+        "Holborn Group"
       ]
     }
   ]

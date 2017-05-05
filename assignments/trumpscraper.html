@@ -3,15 +3,13 @@
   <head>
     <title>TALLER than TRUMP</title>
     <meta charset="utf-8">
-    <!-- Stylesheet link -->
-    <link rel="stylesheet" type="text/css" href="../css/site-specific.css">
-
     <!-- Google fonts code -->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
     <script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css" />
-
+    <!-- Stylesheet link -->
+    <link rel="stylesheet" type="text/css" href="../css/site-specific.css">
     <!-- Loading p5.js library -->
     <script language="javascript" type="text/javascript" src="../libraries/p5-js/p5.js"></script>
     <script language="javascript" type="text/javascript" src="../libraries/p5-js/addons/p5.dom.js"></script>
@@ -24,14 +22,9 @@
       <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand" href="#">TALLER than TRUMP</a>
+          <p class="navbar-text" id="navCity"></p>
         </div>
         <ul class="nav navbar-nav navbar-right">
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown">Select a City
-            <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-            </ul>
-          </li>
           <li><button class="btn navbar-btn" id="prev">Previous City</button></li>
           <li><button class="btn navbar-btn" id="next">Next City</button></li>
         </ul>
@@ -39,10 +32,18 @@
     </nav>
     <div class="row">
       <div class="title">
-        <h1>TALLER THAN TRUMP</h1>
-        <p>Taller than Trump will visualize corporate branding of skyscrapers and other large urban structures around the world, using President Donald Trump's prominent global brand as a benchmark for measuring the prevalence and influence of transnational investments of capital in the urban environment. We will use data and imagery collected from SkyscraperPage.com to sort buildings from cities around the world according to the appearance of names of major corporations (Trump has 66 structures in the US, Canada, India, Panama, South Korea, The Philippines, and Turkey). Elevation images of most buildings are available in a standard size and format, which is ideal for visualization. Additional text data such as status, construction dates, floor and unit count, roof and spire heights, building use and description are also available. By comparing other major global brands to the controversial name of Donald Trump, the project seeks to reveal the political and economic forces driving the construction of the built environment, and their effects on skylines around the world.</p>
+        <div class="container">
+          <div class="Jumbotron overview">
+            <h2>TALLER THAN</h2>
+            <h1>TRUMP</h1>
+            <p>Taller than Trump visualizes corporate branding of skyscrapers and other large urban structures around the world, using President Donald Trump's prominent global brand as a benchmark for measuring the prevalence and influence of transnational investments of capital in the urban environment. We used data and imagery collected from <a href="http://skyscraperpage.com">SkyscraperPage.com</a> to sort buildings from cities around the world according to major developers and owners (Trump has 25 structures in the US, Canada, India, Panama, South Korea, Philippines, and Turkey). Elevation images of the buildings show the prominence of Trump’s brand in cities around the world. By comparing other major global brands to the controversial name of Donald Trump, the project reveals the political and economic forces driving the construction of the built environment, and their effects on skylines.</p>
+          </div>
+        </div>
       </div>
     </div>
-    <div id="sketch-holder"></div>
+    <div id="sketch-holder">
+      <div class="well quote">
+      </div>
+    </div>
   </body>
 </html>
