@@ -13,13 +13,14 @@ var prevPosition;
 var currentCity;
 var nextCity;
 var prevCity;
+var dropdown;
 var brands;
 
 // Global containers
 var branded_bldgs_by_city = {};
 var brands_by_city = {};
 var bldgs_by_city = {};
-var city_list = ["New York City", "Atlantic City", "Sunny Isles Beach", "Las Vegas", "Chicago", "Toronto", "Vancouver", "Istanbul", "Panama", "Mumbai", "Makati", "Seoul"];
+var city_list = ["New York City", "Chicago", "Las Vegas", "Atlantic City", "Sunny Isles Beach", "Toronto", "Vancouver", "Istanbul", "Panama", "Mumbai", "Makati", "Seoul"];
 var tables = {};
 
 // Canvas variables
@@ -33,7 +34,7 @@ function preload() {
   // First loads table of skyscrapers scraped from SkyscraperPage.com,
   // Callback function loadedCSV() triggers loadJSON() of top brands/developers per city
   // Finally, loadedJSON() triggers sortBrands(), which matches brands/developers to buildings from database
-  var skyscraper_csv = loadTable("../webscraping/skyscrapers_master.csv", "csv", "header", loadedCSV);
+  var skyscraper_csv = loadTable("../webscraping/skyscraper_combined_all.csv", "csv", "header", loadedCSV);
 }
 
 function setup(){
@@ -42,6 +43,7 @@ function setup(){
   canvas.parent('sketch-holder');
   // sortBrands(brandData);
   imageMode(CORNERS);
+  rectMode(CORNERS);
   // Set some global variables for convenience
   originY = windowHeight - 100;
   maxHeight = 1000;
@@ -49,6 +51,7 @@ function setup(){
   // Identify navigation buttons and set click functions
   nextCity = select('#next');
   prevCity = select('#prev');
+  dropdown = select('#dropdown-menu');
   nextCity.mousePressed(loadNextCity);
   prevCity.mousePressed(loadPrevCity);
   // Create html tables and place them beneath each city header
@@ -188,7 +191,7 @@ function sortBrands(brands) {
         for(var k = 0; k < brand_list.length; k++){
           var nextHeight = 0;
           var brandname = brand_list[k];
-          if (row.name.includes(brandname) || row.developer.includes(brandname)) {
+          if (row.name.includes(brandname) || row.owner_developer.includes(brandname)) {
             row.brandname = brandname;
             // console.log(row);
             branded_bldgs_by_city[cityname][brandname].push(row);
@@ -262,8 +265,11 @@ function drawImages() {
     var bot = originY - (building.yStart * ht_factor);
     var x = margin + col_width*u;
     if (img == null || img == undefined) return;
-    if (building.brandname == "Trump") {
-
+    if (building.name.includes("Trump")) {
+      fill('orange');
+      noStroke();
+      rect(x, bot, x + col_width, bot - height);
+      fill('black');
     }
     image(img, x, bot, x + width, bot - height);
   }
