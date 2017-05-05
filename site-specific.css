@@ -1,0 +1,194 @@
+body{
+    font-family: 'Ubuntu', helvetica, sans-serif;
+    background-color: white;
+    color: black;
+}
+
+div.title{
+    width: 100%;
+    height: 100%;
+    background: url(../img/Trump_World_Map.png) no-repeat center center fixed;
+    background-size: 100% auto;
+    min-height: 100vh;
+}
+
+div.container-fluid{
+  font-family: 'Ubuntu', helvetica, sans-serif;
+}
+
+div.overview {
+  font-family: 'Ubuntu', helvetica, sans-serif;
+  text-align: center;
+  background-color: rgba(225, 225, 225, 0.5);
+  margin: 80px;
+  padding: 25px;
+  font-size: 20px;
+}
+
+h1{
+  color: black;
+    font-weight: 400;
+    font-size: 2em;
+    max-width: 1200px;
+    text-align: center;
+    margin: 25px, 25px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: auto;
+}
+
+h2{
+  color: black;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+h3{
+  font-size: 1.25em;
+  color: black;
+    font-weight: 300;
+    max-width: 1200px;
+    text-align: center;
+    margin-top: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: auto;
+}
+
+.text {
+  color: #777;
+  background-color:white;
+  padding:50px 80px;
+  text-align: justify;
+}
+
+.parallax {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  padding: 50px 80px;
+  top:0px;
+}
+
+.parallax .left {
+  background-position: left;
+}
+
+.parallax .right {
+  background-position: right;
+}
+
+.parallax .top {
+  background-position: top;
+}
+
+.parallax-bottom {
+  background-position: bottom;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  padding: 50px 80px;
+  top:0px;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: black;
+}
+
+.caption span.border {
+  background-color: lightgray;
+  color: black;
+  padding: 18px;
+  font-size: 18px;
+  letter-spacing: 5px;
+}
+
+div.bio{
+    max-width: 800px;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+img.bioImage{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: block;
+}
+
+img.banner{
+  width: auto;
+  max-width: 50%;
+  text-align: center;
+  display: inline;
+}
+
+.main-header {
+  text-align: center;
+  max-height: 100px;
+}
+
+div.carousel-caption{
+  position: relative;
+  left: auto;
+  right: auto;
+  color: black;
+}
+
+.carousel-indicators li{
+  border-color: black;
+}
+
+.carousel-indicators .active{
+  background-color: black;
+}
+
+p.caption{
+  color: black;
+  font-size: 1em;
+}
+
+p.bioText{
+    font-weight: 300;
+    font-size: 1.05em;
+    line-height: 130%;
+}
+
+p.bioText > a{
+  text-decoration: underline;
+    color: black;
+}
+
+p.bioText > a:hover{
+  color: black;
+    background-color: gray;
+}
+
+div.linkList{
+    max-width: 800px;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+li.assignmentLink{
+    font-weight: 300;
+    font-size: 1.05em;
+    line-height: 130%;
+}
+
+li.assignmentLink > a{
+    color: black;
+}
+
+li.assignmentLink > a:hover{
+    background-color: lightgray;
+}
